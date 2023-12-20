@@ -1,0 +1,47 @@
+<div class="general-container">
+  <div class="subnavbar-courses">
+    <div class="subnavbar-container">
+      <app-admin-navbar></app-admin-navbar>
+    </div>
+    <div class="organizator">
+      <div class="logo">
+        <img src="./../../../../../assets/images/logo.svg" alt="Impronta" />
+      </div>
+      <div class="user-name">
+        <p>
+          Admin. {{ userData?.user?.name + " " + userData?.user?.last_name }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="lateral-menu">
+      <div class="lateral-list-btns">
+        <button [routerLink]="['users']" routerLinkActive="active">
+          <img
+            src="../../../../../assets/icons/users-icon.svg"
+            alt="Users"
+          />
+          Usuarios
+        </button>
+        <button [routerLink]="['courses']" routerLinkActive="active">
+          <img
+            src="../../../../../assets/icons/courses-white-icon.svg"
+            alt="Courses"
+          />
+          Cursos
+        </button>
+        <button [routerLink]="['statistics']" routerLinkActive="active">
+          <img
+            src="../../../../../assets/icons/statistics-icon.svg"
+            alt="Statistics"
+          />
+          Estadisticas
+        </button>
+      </div>
+    </div>
+    <div class="central-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

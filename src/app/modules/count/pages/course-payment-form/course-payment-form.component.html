@@ -1,0 +1,106 @@
+<div class="general-container">
+  <div class="title-container">
+    <h1>Formulario de Pago</h1>
+  </div>
+  <div class="container-payment">
+    <form [formGroup]="paymentForm" (ngSubmit)="getIntegrityFirm()">
+      <!-- OBLIGATORIOS -->
+      <input type="hidden" name="public-key" [value]="publicKey" />
+      <input type="hidden" name="currency" [value]="currency" />
+      <input type="hidden" name="reference" [value]="reference" />
+      <input type="hidden" name="signature:integrity" [value]="integrity" />
+      <input type="hidden" name="redirect-url" [value]="redirectLink" />
+      <div class="input-contain">
+        <label for="customer-data:full-name">Nombres y apellidos</label>
+        <input
+          type="text"
+          name="customer-data:full-name"
+          formControlName="fullName"
+          placeholder="Ej: Juan Felipe Perez Perez"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:email">Correo</label>
+        <input
+          type="email"
+          name="customer-data:email"
+          formControlName="email"
+          placeholder="Ej: juanperez@correo.com"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:legal-id-type">Tipo de Documento</label>
+        <select
+          name="customer-data:legal-id-type"
+          formControlName="documentType"
+          required
+        >
+          <option disabled selected value="">
+            Seleccione el tipo de documento
+          </option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="CE">Cédula de Extranjería</option>
+          <option value="NIT">Número de Identificación Tributaria</option>
+          <option value="PP">Pasaporte</option>
+          <option value="TI">Tarjeta de Identidad</option>
+          <option value="DNI">Documento Nacional de Identidad</option>
+          <option value="RG">Carteira de Identidade / Registro Geral</option>
+        </select>
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:legal-id">Nro de Documento</label>
+        <input
+          type="number"
+          name="customer-data:legal-id"
+          formControlName="documentNum"
+          placeholder="Ej: 1042031023"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:phone-number">Teléfono</label>
+        <input
+          type="number"
+          name="customer-data:phone-number"
+          formControlName="phoneNumber"
+          placeholder="Ej: 313 111 0000"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="course-select">Curso</label>
+        <select name="course-select" formControlName="courseSelected" required>
+          <option disabled selected value="">Seleccione el curso</option>
+          <option *ngFor="let course of courses">
+            {{ course.name }}
+          </option>
+        </select>
+      </div>
+      <div class="input-contain">
+        <label for="amount-in-cents">Valor</label>
+        <input
+          type="text"
+          name="amount-in-cents"
+          formControlName="amountInCents"
+          placeholder="Ej: $50000"
+          required
+        />
+      </div>
+      <div class="legal-info">
+        <p>
+          Valoramos tu privacidad. Los datos proporcionados en este formulario
+          se tratarán de manera confidencial y solo se utilizarán con el
+          propósito de procesar y gestionar tu pago. No compartiremos
+          tus datos con terceros sin tu consentimiento. Puedes obtener más
+          información sobre cómo manejamos y protegemos tus datos en nuestra
+          [Política de Privacidad]. Gracias por elegirnos.
+        </p>
+      </div>
+      <div class="btn-contain">
+        <button type="submit">Pagar con Wompi</button>
+      </div>
+    </form>
+  </div>
+</div>

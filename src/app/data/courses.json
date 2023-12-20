@@ -1,0 +1,138 @@
+[
+  {
+  "name": "Atención a Victimas de Violencia Sexual",
+  "url_image": "../../../assets/images/C_Atencion a victimas de violencia sexual.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Atención a Victimas de Violencia con Agentes Químicos",
+  "url_image": "../../../assets/images/C_Atencion a victimas de Violencia con Agentes Quimicos.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Atención Integral al Consumidor de Sustancias Psicoactivas",
+  "url_image": "../../../assets/images/C_Atención Integral al Consumidor de Sustancias Psicoactivas.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Cuidados Paleativos y Manejo del Dolor",
+  "url_image": "../../../assets/images/C_Cuidados Paleativos y Manejo del Dolor.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Duelo Gestacional y Perinatala",
+  "url_image": "../../../assets/images/C_Duelo Gestacional y Perinatala.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Entrenamiento en Habilidades Sociales",
+  "url_image": "../../../assets/images/",
+  "course_type": "social",
+  "substantive_function": "Proyección Social",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Gestionando Mi Duelo",
+  "url_image": "../../../assets/images/",
+  "course_type": "social",
+  "substantive_function": "Proyección Social",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Gestión del Duelo",
+  "url_image": "../../../assets/images/C_Gestion del Duelo.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Inclusión Social para las Personas con Necesidades Educativas Diferenciadas",
+  "url_image": "../../../assets/images/C_Inclusión Social para las Personas con Necesidades Educativas Diferenciadas.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Atención Diferencial para la Población LGBT",
+  "url_image": "../../../assets/images/C_Atención Diferencial para la Población LGTB.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Instituciones Amigas de la Mujer y la Infancia",
+  "url_image": "../../../assets/images/C_Instituciones Amigas de la Mujer y la Infancia.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Humanización en el Servicio de Salud",
+  "url_image": "../../../assets/images/C_Humanización en el Servicio de Salud.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Plan de Cuidados en Salud Mental",
+  "url_image": "../../../assets/images/",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Primeros Auxilios Emocionales",
+  "url_image": "../../../assets/images/C_Primeros Auxilios Emocionales.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Protocolos de Atención a la Violencia Obstétrica",
+  "url_image": "../../../assets/images/C_Protocolos de Atención a la Violencia Obstétrica.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Seguridad y Salud en el Trabajo",
+  "url_image": "../../../assets/images/C_Seguridad y Salud en el Trabajo.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+},
+{
+  "name": "Manejo de Residuos Solidos y Peligrosos Hospitalarios",
+  "url_image": "../../../assets/images/C_Manejo de Residuos Solidos y Peligrosos Hospitalarios.svg",
+  "course_type": "profesional",
+  "substantive_function": "Formación Profesional",
+  "hours_number": 40,
+  "value": 20000
+}
+]

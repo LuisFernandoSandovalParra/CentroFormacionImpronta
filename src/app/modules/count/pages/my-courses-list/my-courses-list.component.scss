@@ -1,0 +1,143 @@
+.my-courses-list-container{
+  background-color: white;
+  .title-my-courses-list{
+    text-align: center;
+    font-family: 'PoppinsBlack';
+    font-size: 0.9em;
+    padding: 5% 0;
+    color: #2755a2;
+  }
+  .filter-container{
+    font-family: 'PoppinsSemiBold';
+    text-align: center;
+    color: #2755a2;
+    select{
+      font-family: 'PoppinsSemiBold';
+      font-size: 1em;
+      border-radius: 10px;
+    }
+  }
+  .catalog-courses{
+    .title-courses-type{
+      color: #47b8a3;
+      font-family: 'PoppinsBlack';
+      text-align: center;
+      padding: 5% 0;
+    }
+  }
+  .courses {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    .card-course {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: white;
+      margin: 3%;
+      max-width: 20em;
+      border-radius: 8px;
+      box-shadow: 0px 2px 2px 2px rgba(157, 153, 153, 0.1);
+      transition: all 0.25s;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      .capa {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #47b8a3d8;
+        border-radius: 8px;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        color: white;
+        h2 {
+          font-family: "PoppinsBlack";
+          text-align: center;
+        }
+        p {
+          font-family: "PoppinsSemiBold";
+          padding: 2%;
+          text-align: center;
+        }
+      }
+    }
+    .card-course:hover {
+      transform: translateY(-15px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.508);
+      .capa {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .default-image{
+      background-color: white;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .my-courses-list-container{
+    .title-my-courses-list{
+      font-size: 1.2em;
+      padding: 5% 0;
+    }
+    .filter-container{
+      font-family: 'PoppinsSemiBold';
+      text-align: center;
+      label{
+        font-family: 'PoppinsSemiBold';
+        font-size: 1.2em;
+      }
+      select{
+        font-family: 'PoppinsSemiBold';
+        font-size: 1.2em;
+      }
+    }
+    .catalog-courses{
+      .title-courses-type{
+        padding: 5% 0;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .my-courses-list-container{
+    .title-my-courses-list{
+      font-size: 1.2em;
+      padding: 2% 0;
+    }
+    .filter-container{
+      font-family: 'PoppinsSemiBold';
+      text-align: center;
+      padding: 2% 0;
+      label{
+        font-family: 'PoppinsSemiBold';
+        font-size: 1.2em;
+      }
+      select{
+        font-family: 'PoppinsSemiBold';
+        font-size: 1.2em;
+      }
+    }
+    .catalog-courses{
+      .title-courses-type{
+        padding: 2% 0;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

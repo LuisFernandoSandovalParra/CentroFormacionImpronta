@@ -1,0 +1,37 @@
+<div class="general-container">
+  <div class="subnavbar-courses">
+    <div class="subnavbar-container">
+      <app-count-navbar></app-count-navbar>
+    </div>
+    <div class="organizator">
+      <div class="logo">
+        <img src="./../../../../../assets/images/logo.svg" alt="Impronta" />
+      </div>
+      <div class="user-name">
+        <p>{{userData?.user?.name + " " + userData?.user?.last_name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="lateral-menu">
+      <div class="lateral-list-btns">
+        <button
+          [routerLink]="['list']"
+          routerLinkActive="active"
+        >
+        <img src="../../../../../assets/icons/courses-white-icon.svg" alt="Courses">
+          Mis cursos
+        </button>
+        <button
+          [routerLink]="['store']"
+          routerLinkActive="active"
+        >
+        <img src="../../../../../assets/icons/courses-store-white-icon.svg" alt="Store">
+        Tienda</button>
+      </div>
+    </div>
+    <div class="central-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

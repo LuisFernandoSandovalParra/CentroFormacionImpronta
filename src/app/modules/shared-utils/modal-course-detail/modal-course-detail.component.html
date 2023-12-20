@@ -1,0 +1,23 @@
+<div class="course-general-container">
+  <div class="close-dialog">
+    <button (click)="closeDialog()">
+      <img src="../../../../../assets/icons/close.svg" alt="Volver" />
+    </button>
+  </div>
+  <div class="course-image">
+    <img [src]="data.course.image" [alt]="data.course.name" />
+  </div>
+  <div class="text-content">
+    <h3>Contenido programatico:</h3>
+    <ul>
+      <li *ngFor="let module of data.modules">{{ module }}</li>
+    </ul>
+    <h3>Función sustantiva:</h3>
+    <p>{{ data.course.substantive_function }}</p>
+    <h3>Valor:</h3>
+    <p>{{ data.course.value | currency : "COP" : " $" : "1.0-0" }}</p>
+  </div>
+  <div class="btn-subscription">
+    <button (click)="redirectTo(data.redirectTo)">Inscribete</button>
+  </div>
+</div>

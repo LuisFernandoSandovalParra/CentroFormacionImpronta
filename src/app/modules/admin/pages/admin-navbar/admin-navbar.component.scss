@@ -1,0 +1,193 @@
+.show-mobile {
+  display: block;
+  div {
+    z-index: 2;
+    padding: 1em;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    button {
+      border: 0;
+      background: transparent;
+    }
+    .menu-mobile-btn {
+      width: 2em;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .side-menu {
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: all ease-out 0.5s;
+    font-family: "PoppinsSemiBold";
+    font-size: 1.7em;
+    color: #2755a2;
+    z-index: 9999;
+    height: 100%;
+    &.active {
+      transform: translateX(0);
+    }
+    .back-mobile-btn {
+      width: 3em;
+      cursor: pointer;
+    }
+    ul {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40% 0%;
+      text-align: center;
+      font-size: 0.9em;
+      li a {
+        text-decoration: none;
+        color: inherit;
+      }
+      li {
+        margin: 6% 0%;
+      }
+    }
+  }
+  .btns-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .user-btns {
+      font-family: "PoppinsSemiBold";
+      font-size: 0.9em;
+      border: none;
+      padding: 5% 0;
+    }
+    .profile-btn {
+      color: #47b8a4;
+    }
+    .logOut-btn {
+      color: red;
+    }
+  }
+}
+
+.hide-mobile {
+  display: none;
+  font-family: "PoppinsSemiBold";
+  background-color: #47b8a4;
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 1 em;
+    margin-left: 1 em;
+    padding: 0;
+  }
+  nav {
+    display: grid;
+    align-items: center;
+    font-size: 1.7em;
+    color: #00abd3;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style: none;
+      a {
+        margin: 0.2em;
+        color: inherit;
+        text-decoration: none;
+      }
+      li {
+        margin-right: 0.5em;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    .account {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .show-mobile {
+    font-size: 1.6em;
+    .logo {
+      width: 1%;
+    }
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .show-mobile {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+    justify-content: right;
+    .btns-container {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0;
+      .user-btns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        font-family: "PoppinsSemiBold";
+        font-size: 1em;
+        padding: 5% 0;
+        background-color: transparent;
+      }
+      .profile-btn {
+        font-family: 'PoppinsSemiBold';
+        border: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        img{
+          width: 20%;
+        }
+        cursor: pointer;
+      }
+      .logOut-btn {
+        font-family: 'PoppinsSemiBold';
+        border: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        img{
+          width: 20%;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

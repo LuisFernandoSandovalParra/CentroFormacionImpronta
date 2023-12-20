@@ -1,0 +1,147 @@
+.general-container {
+  font-family: "PoppinsSemiBold";
+  .subnavbar-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #47b8a4;
+    .subnavbar-container {
+      width: 100%;
+      display: flex;
+      align-items: left;
+      border: none;
+    }
+    .organizator {
+      width: 100%;
+      text-align: center;
+      background-color: #47b8a4;
+      .logo {
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        img {
+          width: 50%;
+        }
+      }
+      .user-name{
+        font-size: 1.6em;
+        padding: 5% 0;
+        color: white;
+      }
+    }
+  }
+}
+.lateral-menu{
+  display: none;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-container {
+    .subnavbar-courses{
+      .organizator {
+        .logo {
+          img {
+            width: 35%;
+          }
+        }
+        .user-name{
+          font-size: 2.6em;
+          padding: 5% 0;
+        }
+      }
+    }
+  }
+  .lateral-menu{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-container {
+    font-family: "PoppinsSemiBold";
+    .subnavbar-courses {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      .subnavbar-container {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+      .organizator {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        .logo {
+          width: 30.3%;
+          text-align: center;
+          img {
+            width: 50%;
+          }
+        }
+        .user-name{
+          text-align: center;
+          width: 100%;
+          font-size: 2em;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .content-container{
+    display: flex;
+    .lateral-menu{
+      display: flex;
+      width: 20%;
+      height: 85vh;
+      .lateral-list-btns{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #47b8a4;
+        button{
+          display: flex;
+          align-items: center;
+          align-content: center;
+          padding: 7% 10%;
+          font-family: 'PoppinsSemiBold';
+          font-size: 1.2em;
+          text-align: left;
+          border: none;
+          background-color: #47b8a4;
+          color: white;
+          cursor: pointer;
+          img{
+            width: 1.7em;
+            padding: 0 6%;
+            color:white;
+          }
+        }
+        button:hover{
+          background-color: #2755a2;
+          color: white;
+        }
+        button:active{
+          background-color: #2755a2;
+        }
+      }
+    }
+    .central-container{
+      width: 100%;
+      background-image: url('../../../../../assets/images/logo.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 85vh;
+      overflow-y: scroll;
+    }
+  }
+}

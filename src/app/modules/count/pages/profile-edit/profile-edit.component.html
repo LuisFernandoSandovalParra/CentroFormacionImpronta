@@ -1,0 +1,208 @@
+<div class="general-container">
+  <div class="signin-container">
+    <div class="formulary">
+      <form [formGroup]="profileForm" (ngSubmit)="sendEditedInformation()">
+        <div class="message-error" *ngIf="errorSignIn">
+          <p>Correo y/o contraseña incorrectos.</p>
+        </div>
+        <div class="input-signin">
+          <label for="firstName">Nombres</label>
+          <input type="text" formControlName="firstName" placeholder="Ej: Luis Enrique" autocomplete="off" required />
+          <div
+            class="alert"
+            *ngIf="
+              firstName?.invalid && (firstName?.dirty || firstName?.touched)
+            "
+          >
+            <div class="error-message" *ngIf="firstName?.errors?.['required']">
+              <p>Este campo es obligatorio.</p>
+            </div>
+            <div class="error-message" *ngIf="firstName?.errors?.['pattern']">
+              <p>Ingrese correctamente su(s) nombre(s).</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="lastName">Apellidos</label>
+          <input type="text" formControlName="lastName" placeholder="Ej: Peréz Peréz" autocomplete="off" required />
+          <div
+            class="alert"
+            *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)"
+          >
+            <div class="error-message" *ngIf="lastName?.errors?.['required']">
+              <p>Este campo es obligatorio.</p>
+            </div>
+            <div class="error-message" *ngIf="lastName?.errors?.['pattern']">
+              <p>Ingrese correctamente su(s) apellido(s).</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="documentType">Tipo de Documento</label>
+          <select name="documentType" formControlName="documentType" required>
+            <option disabled selected value="">
+              Seleccione el tipo de documento
+            </option>
+            <option value="Cedula de Ciudadania">Cédula de Ciudadanía</option>
+            <option value="Cedula de Extranjeria">Cédula de Extranjería</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+            <option value="NIT Persona Natural">NIT Persona Natural</option>
+            <option value="NIT Persona Juridica">NIT Persona Juridica</option>
+            <option value="NIT Persona Extranjera">NIT Persona Extranjera</option>
+          </select>
+        </div>
+        <div class="input-signin">
+          <label for="documentNum">Nro de documento</label>
+          <input type="text" formControlName="documentNum" placeholder="Ej: 1193123475" autocomplete="off" required />
+          <div
+            class="alert"
+            *ngIf="
+              documentNum?.invalid &&
+              (documentNum?.dirty || documentNum?.touched)
+            "
+          >
+            <div
+              class="error-message"
+              *ngIf="documentNum?.errors?.['minlength']"
+            >
+              <p>El nro. de documento debe tener 9 digitos o mas.</p>
+            </div>
+            <div
+              class="error-message"
+              *ngIf="documentNum?.errors?.['required']"
+            >
+              <p>Ingrese correctamente el numero de documento.</p>
+            </div>
+            <div class="error-message" *ngIf="documentNum?.errors?.['pattern']">
+              <p>El nro. de documento solo puede llevar digitos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="birthdate">Fecha de nacimiento</label>
+          <input
+            type="date"
+            name="birthdate"
+            formControlName="birthdate"
+            placeholder="Ej: 2000-01-30"
+            autocomplete="off"
+            required
+          />
+          <div
+            class="alert"
+            *ngIf="
+              birthdate?.invalid && (birthdate?.dirty || birthdate?.touched)
+            "
+          >
+            <div class="error-message" *ngIf="birthdate?.errors?.['required']">
+              <p>Este campo es obligatorio.</p>
+            </div>
+            <div
+              class="error-message"
+              *ngIf="birthdate?.errors?.['minimunAge']"
+            >
+              <p>Debe ser mayor a 18 años.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="phoneNumber">Nro de teléfono</label>
+          <input type="text" formControlName="phoneNumber" placeholder="Ej: 3133334444" autocomplete="off" required/>
+          <div
+            class="alert"
+            *ngIf="
+              phoneNumber?.invalid &&
+              (phoneNumber?.dirty || phoneNumber?.touched)
+            "
+          >
+            <div
+              class="error-message"
+              *ngIf="phoneNumber?.errors?.['minlength']"
+            >
+              <p>El nro. de teléfono debe tener 10 digitos.</p>
+            </div>
+            <div
+              class="error-message"
+              *ngIf="phoneNumber?.errors?.['required']"
+            >
+              <p>Ingrese correctamente el nro. de teléfono.</p>
+            </div>
+            <div class="error-message" *ngIf="phoneNumber?.errors?.['pattern']">
+              <p>El nro. de teléfono solo puede llevar digitos.</p>
+            </div>
+            <div
+              class="error-message"
+              *ngIf="phoneNumber?.errors?.['maxlength']"
+            >
+              <p>El nro. de teléfono debe tener 10 digitos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="academicLevel">Nivel academico:</label>
+          <select name="academicLevel" formControlName="academicLevel" required>
+            <option disabled selected value="">
+              Seleccione su nivel academico
+            </option>
+            <option value="bachiller">Bachiller</option>
+            <option value="tecnico">Tecnico</option>
+            <option value="profesional">Profesional</option>
+          </select>
+          <div
+            class="alert"
+            *ngIf="
+              academicLevel?.invalid &&
+              (academicLevel?.dirty || academicLevel?.touched)
+            "
+          >
+            <div
+              class="error-message"
+              *ngIf="academicLevel?.errors?.['required']"
+            >
+              <p>Este campo es obligatorio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="profession">Profesión/Tecnico/Ocupación</label>
+          <input type="text" formControlName="profession" placeholder="Ej: Enfermeria" autocomplete="off" required />
+          <div
+            class="alert"
+            *ngIf="
+              profession?.invalid && (profession?.dirty || profession?.touched)
+            "
+          >
+            <div class="error-message" *ngIf="profession?.errors?.['required']">
+              <p>Este campo es obligatorio.</p>
+            </div>
+            <div class="error-message" *ngIf="profession?.errors?.['pattern']">
+              <p>Ingrese correctamente su profesión.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-signin">
+          <label for="email">Correo</label>
+          <input type="email" formControlName="email" placeholder="Ej: pperez@correo.com" autocomplete="off" required/>
+          <div
+            class="alert"
+            *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+          >
+            <div class="error-message" *ngIf="email?.errors?.['required']">
+              <p>Este campo es obligatorio.</p>
+            </div>
+            <div class="error-message" *ngIf="email?.errors?.['pattern']">
+              <p>Ingrese correctamente su email.</p>
+            </div>
+          </div>
+        </div>
+        <div class="register-url">
+          <p>Presiona 'Modificar' para cambiar tu información personal.</p>
+        </div>
+        <div class="send-btn">
+          <button type="submit">Modificar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

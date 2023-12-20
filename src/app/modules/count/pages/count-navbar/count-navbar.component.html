@@ -1,0 +1,38 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toogleMenu()">
+      <img src="../../../../../assets/icons/menu-mobile-icon.svg" class="menu-mobile-btn" alt="menu"/>
+    </button>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">
+      <img src="../../../../../assets/icons/back-row-icon.svg" class="back-mobile-btn" alt="volver">
+    </button>
+    <ul>
+      <li><a (click)="toogleMenu()" [routerLink]="['myCourses']" routerLinkActive="active" href="">Mis cursos</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['coursesStore']" routerLinkActive="active" href="">Tienda</a></li>
+    </ul>
+    <div class="btns-container">
+      <button (click)="toogleMenu()" [routerLink]="['profile']"  routerLinkActive="active" class="user-btns profile-btn">
+        Mi perfil
+      </button>
+      <button (click)="logOut()" [routerLink]="['logOut']"  routerLinkActive="active" class="user-btns logOut-btn">
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+</div>
+<div class="hide-mobile">
+  <div>
+    <div class="btns-container">
+      <button [routerLink]="['profile']" routerLinkActive="active" class="user-btns profile-btn">
+        <img src="../../../../../assets/icons/profile-white-icon.svg" alt="Perfil">
+        Mi perfil
+      </button>
+      <button (click)="logOut()" [routerLink]="['logOut']" routerLinkActive="active" class="user-btns logOut-btn">
+        <img src="../../../../../assets/icons/logout-white-icon.svg" alt="Cerrar sesión">
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+</div>

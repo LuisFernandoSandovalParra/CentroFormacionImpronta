@@ -1,0 +1,55 @@
+<div class="general-container">
+  <div class="admin-users-container">
+    <div class="title-admin-users">
+      <h1>Usuarios</h1>
+    </div>
+    <div class="menu-btns">
+      <button>Ver usuarios</button>
+      <button>Registrar usuario</button>
+      <button>Modificar usuario</button>
+      <button>Eliminar usuario</button>
+    </div>
+    <div class="subtitle-admin-users">
+      <h2>Listado</h2>
+    </div>
+    <div class="central-container">
+      <div class="show-users-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Fecha de nacimiento</th>
+              <th>Tipo de documento</th>
+              <th>Numero de documento</th>
+              <th>Numero de teléfono</th>
+              <th>Correo</th>
+              <th>Nivel academico</th>
+              <th>Profesión/Tecnico/Area</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.name }}</td>
+              <td>{{ user.last_name }}</td>
+              <td>{{ user.birthdate }}</td>
+              <td>{{ user.document_type }}</td>
+              <td>{{ user.document_number }}</td>
+              <td>{{ user.phone_number }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.academy_level }}</td>
+              <td>{{ user.profession }}</td>
+              <td>
+                <div class="container-table-btns">
+                  <button>editar</button>
+                  <button>eliminar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

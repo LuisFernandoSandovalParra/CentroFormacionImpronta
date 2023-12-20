@@ -1,0 +1,35 @@
+<div class="my-courses-list-container">
+  <div class="title-my-courses-list">
+    <h1>Mis Cursos</h1>
+  </div>
+  <div class="filter-container">
+    <form [formGroup]="filterForm">
+      <label for="coursesType">Tipo de cursos: </label>
+      <select name="coursesType" formControlName="coursesType" required>
+        <option selected value="Todos">Todos</option>
+        <option value="Profesional">Profesionales</option>
+        <option value="Social">Sociales</option>
+      </select>
+    </form>
+  </div>
+  <div class="catalog-courses">
+    <div *ngIf="coursesType" class="title-courses-type">
+      <h1>{{coursesType}}</h1>
+    </div>
+    <div class="courses">
+      <div
+        *ngFor="let course of getListCourses(coursesType)"
+        class="card-course"
+      >
+        <div class="course">
+          <img [src]="course.image" alt="Curso" />
+        </div>
+      </div>
+      <div *ngIf="getListCourses(coursesType).length <= 0" class="default-image">
+        <div class="text-default">
+          <h2>No se encuentra registrado en ningún curso.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
