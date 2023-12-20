@@ -1,0 +1,229 @@
+body{
+  margin: 0;
+}
+
+.show-mobile{
+  display: block;
+  box-shadow: 0px 2px 5px rgb(black, .2);
+  font-family: "PoppinsSemiBold";
+  color: #8F8F8F;
+    div {
+    z-index: 2;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      border: 0;
+      background: transparent;
+    }
+    .logo-mobile{
+      width: 9em;
+    }
+    .menu-mobile-btn{
+      width: 2em;
+      cursor: pointer;
+    }
+  }
+}
+
+.side-menu{
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: all ease-out .5s;
+  font-size: 1.7em;
+  z-index: 9999;
+  &.active{
+    transform: translateX(0);
+  }
+  .back-mobile-btn{
+    width: 3em;
+    cursor: pointer;
+  }
+  ul{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+    font-size: 0.9em;
+    li a{
+      text-decoration: none;
+      color: inherit;
+    }
+    li{
+      margin: 6%;
+    }
+    li:hover{
+      color: #1A54A4;
+    }
+  }
+  .donation-btn{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 3px solid;
+    padding: 0.2em 0.5em;
+    color: #1A54A4;
+    font-size: 1.2em;
+    font-family: "PoppinsSemiBold";
+    gap: 3px;
+    cursor: pointer;
+    img{
+      width: 1.2em;
+      transform: scaleX(-1);
+    }
+  }
+  .donation-btn:hover{
+    border: 3px solid #5e81b1;
+    background-color: #5e81b1;
+    color: white;
+  }
+  .donation-btn:active{
+    background-color: #12386d;
+  }
+}
+
+.hide-mobile {
+  display: none;
+//  font-family: 'PoppinsExtraLight';
+  color: black;
+  div {
+    padding: 1em 0em;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    padding: 1% 0;
+    margin-right: 3%;
+  }
+  nav {
+    display: grid;
+    align-items: center;
+    color: black;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style: none;
+      a {
+        margin: 1em;
+        color: inherit;
+        text-decoration: none;
+      }
+      li{
+        font-size: 0.8em;
+        margin-right: 0.5em;
+      }
+    }
+    li:hover{
+      color: #07BCA3;
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    .account {
+      margin-right: .5em;
+    }
+  }
+  .donation{
+    padding: 0 0;
+  }
+  .donation-btn{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 0.02em 0.5em;
+    border: 3px solid #07BCA3;
+    background-color: white;
+    color: #1A54A4;
+    font-size: 1.4em;
+    gap: 3px;
+    cursor: pointer;
+    img{
+      width: 1.8em;
+      transform: scaleX(-1);
+      padding: 0.2em;
+    }
+  }
+  .donation-btn:hover{
+    border: 3px solid #07BCA3;
+    background-color: #07BCA3;
+    color: white;
+  }
+  .donation-btn:active{
+    background-color: #AFB800;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .show-mobile{
+    div{
+      .logo-mobile{
+        width: 16em;
+      }
+    }
+    .menu-mobile-btn{
+      width: 2em;
+      cursor: pointer;
+    }
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .show-mobile {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+    .logo{
+      img{
+        width: 15em;
+      }
+    }
+    div {
+      padding: 1em 5em;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex-wrap: wrap;
+      .donation{
+        margin-left: auto;
+      }
+    }
+    nav {
+      font-size: 2.2em;
+      color: #8F8F8F;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        list-style: none;
+        font-size: 0.8em;
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+        li{
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}

@@ -7,9 +7,10 @@ import { AuthInterceptorInterceptor } from './core/interceptors/auth-interceptor
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ModalCourseDetailComponent } from './modules/shared-utils/modal-course-detail/modal-course-detail.component';
+import { NavbarComponent } from './sharing-components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, ModalCourseDetailComponent],
+  declarations: [AppComponent, ModalCourseDetailComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

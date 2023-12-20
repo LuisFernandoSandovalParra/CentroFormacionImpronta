@@ -1,0 +1,50 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/icons/menu-mobile-icon.svg" class="menu-mobile-btn" alt="menu"/>
+    </button>
+    <a href="#">
+      <img src="../../../assets/icons/logo.svg" class="logo-mobile" alt="fundaciónImpronta"/>
+    </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/icons/back-row-icon.svg" class="back-mobile-btn" alt="volver">
+    </button>
+    <ul>
+      <li><a (click)="toogleMenu()" [routerLink]="['us']" routerLinkActive="active" href="">Nosotros</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['courses']" routerLinkActive="active" href="">Cursos</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['bibliography']" routerLinkActive="active" href="">Bibliografia</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['contact']" routerLinkActive="active" href="">Contáctanos</a></li>
+    </ul>
+    <div>
+      <button (click)="toogleMenu()" [routerLink]="['login']"  routerLinkActive="active" class="donation-btn">
+        <img src="../../../assets/icons/user-login-icon.svg" alt="Login">
+        Ingresar
+      </button>
+    </div>
+  </div>
+</div>
+<div class="hide-mobile">
+  <div>
+    <div class="logo">
+      <a class="logo" href="">
+        <img src="../../../assets/icons/logo.svg" alt="logo" width="150px">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a [routerLink]="['us']" href="">Nosotros</a></li>
+        <li><a [routerLink]="['courses']" href="">Cursos</a></li>
+        <li><a [routerLink]="['bibliography']" href="">Bibliografia</a></li>
+        <li><a [routerLink]="['contact']" href="">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <div class="donation">
+      <button [routerLink]="['login']" routerLinkActive="active" class="donation-btn">
+        <img src="../../../assets/icons/user-login-icon.svg" alt="Login">
+        Ingresar
+      </button>
+    </div>
+  </div>
+</div>
