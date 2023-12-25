@@ -193,6 +193,10 @@ body{
   }
   .hide-mobile {
     display: block;
+    background: linear-gradient(to right, #00B9A0, #00B9A0);
+    background-size: 32.5%;
+    background-repeat: no-repeat;
+    background-position: right;
     .logo{
       img{
         width: 15em;

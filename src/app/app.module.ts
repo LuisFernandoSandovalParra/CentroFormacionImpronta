@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ModalCourseDetailComponent } from './modules/shared-utils/modal-course-detail/modal-course-detail.component';
 import { NavbarComponent } from './sharing-components/navbar/navbar.component';
+import { FooterComponent } from './sharing-components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, ModalCourseDetailComponent, NavbarComponent],
+  declarations: [AppComponent, ModalCourseDetailComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

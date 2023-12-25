@@ -1,0 +1,191 @@
+.general-banner {
+  display: flex;
+  flex-direction: column-reverse;
+  .banner-title {
+    text-align: center;
+    h1 {
+      color: #1a54a4;
+      font-family: "PoppinsSemiBold";
+      font-size: 2em;
+    }
+    p {
+      margin: 0 35%;
+      background-color: #1a54a4;
+      color: white;
+      border-radius: 20px;
+      font-size: 1.4em;
+    }
+  }
+  .banner-img {
+    padding: 5% 0;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 70%;
+    }
+  }
+}
+
+.mision {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10% 0;
+  margin: 10% 0 0 0;
+  background-color: #1a54a4;
+  .mision-img {
+    text-align: center;
+  }
+  .mision-info {
+    color: white;
+    font-family: "PoppinsSemiBold";
+    text-align: justify;
+    padding: 0 6%;
+    h1 {
+      text-align: center;
+    }
+    p {
+      margin: 4% 0;
+    }
+  }
+}
+
+.vision {
+  margin: 0;
+  background-color: #00b9a0;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-banner {
+    .banner-title {
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2.8em;
+        border-radius: 28px;
+      }
+    }
+  }
+
+  .mision {
+    flex-direction: row;
+    .mision-img {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    .mision-info {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 6%;
+      font-size: 1.2em;
+      h1 {
+        text-align: left;
+      }
+    }
+  }
+  .vision{
+    flex-direction: row-reverse;
+    padding-right: 0;
+    padding-left: 0;
+
+      .vision-img{
+        img{
+          width: 80%;
+        }
+      }
+
+      .vision-info{
+        padding: 0;
+        padding-right: 0;
+        padding-left: 6%;
+        font-size: 1.2em;
+      }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-banner {
+    flex-direction: row;
+    background: linear-gradient(to right, #00b9a0, #00b9a0);
+    background-size: 32.5%;
+    background-repeat: no-repeat;
+    background-position: right;
+    .banner-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      margin-left: 10%;
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2.3em;
+        padding: 0 5%;
+        margin: 0 5%;
+      }
+    }
+    .banner-img {
+      padding: 0 0;
+      margin-right: 10%;
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  .mision {
+    flex-direction: row;
+    padding: 6% 0;
+    margin: 0% 0;
+    .mision-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .mision-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      padding-right: 10%;
+      font-size: 1.2em;
+      h1 {
+        text-align: left;
+        font-size: 3.2em;
+      }
+      p {
+        margin: 0;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .vision{
+    flex-direction: row-reverse;
+    padding-right: 0;
+    padding-left: 10%;
+
+    .vision-img{
+      img{
+        width: 61%;
+      }
+    }
+    .vision-info{
+      padding-left: 0%;
+      padding-right: 0;
+      font-size: 1.2em;
+    }
+  }
+}

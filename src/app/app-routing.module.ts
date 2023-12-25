@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('../app/modules/home/home.module').then((m) => m.HomeModule),
+      import('../app/modules/us/us.module').then((m) => m.UsModule),
+  },{
+    path:'courses',
+    loadChildren:() =>
+    import('../app/modules/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'auth',
